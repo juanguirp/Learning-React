@@ -4,20 +4,21 @@ import ReactDOM from 'react-dom'
 // Meet our test subject
 const robertFromNY = {
     name: 'Robert Towers',
-    city: 'New York City',
+    city: 'New York',
     age: 77
 }
 
-// Rendering simple elements:
+// => Rendering simple elements:
+function getAnonymousThreatTo(person) {
+    return `Hi ${person.name}! We know you are in ${person.city} city... Expect Us!!!`
+}
+
 const App1 = <h1>{getAnonymousThreatTo(robertFromNY)}</h1>
 
-function getAnonymousThreatTo(person) {
-    return `Hi ${person.name}! We know you are in ${person.city}... Expect Us!!!`
-}
 //ReactDOM.render(App1, document.getElementById('root'))
 
 
-// Rendering a functional component:
+// => Rendering a functional component:
 const AnonymousThreat = (props) => (
     <div>
         <h2>Hi {props.name}!</h2>
@@ -36,4 +37,29 @@ const App2 = () => (
     </div>
 )
 
-ReactDOM.render(<App2 />, document.getElementById('root'))
+//ReactDOM.render(<App2 />, document.getElementById('root'))
+
+// => Rendering a class component:
+class AnonymousThreatComponent extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>We 'have class' and elegance:</h1>
+                <h2>Hello Mr. {this.props.name}!</h2>
+                <p>We go to your location in {this.props.city} city.</p>
+                <p>Please wait for our arrival.</p>
+                <hr />
+            </div>
+        )
+    }
+}
+
+const App3 = () => (
+    <div>
+        <AnonymousThreatComponent
+            name={robertFromNY.name}
+            city={robertFromNY.city} />
+    </div>
+)
+
+ReactDOM.render(<App3 />, document.getElementById('root'))
