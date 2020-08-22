@@ -128,4 +128,17 @@ const App4 = () => (
     </div>
 )
 
-ReactDOM.render(<App4 />, document.getElementById('root'))
+//ReactDOM.render(<App4 />, document.getElementById('root'))
+
+// => All components
+const App = () => (
+    <div>
+        <App4/>
+        <App3/>
+        <App2/>
+        {App1}
+    </div>
+)
+
+// => Rendering all components
+ReactDOM.render(<App />, document.getElementById('root'))
