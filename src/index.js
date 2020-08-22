@@ -1,8 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const App = <h1>Hola Mundo con React usando JSX</h1>
+const robertFromNY = {
+    name: 'Robert Towers',
+    city: 'New York City',
+    age: 7
+}
 
-const root = document.getElementById('root')
+const App = <h1>{getAnonymousThreatTo(robertFromNY)}</h1>
 
-ReactDOM.render(App, root)
+function getAnonymousThreatTo(person) {
+    return `Hi ${person.name}! We know you are in ${person.city}... Expect Us!!!`
+}
+
+ReactDOM.render(App, document.getElementById('root'))
