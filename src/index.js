@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 const robertFromNY = {
     name: 'Robert Towers',
     city: 'New York City',
-    age: 7
+    age: 77
 }
 
 // Rendering simple elements:
