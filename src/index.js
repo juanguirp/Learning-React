@@ -41,6 +41,13 @@ const App2 = () => (
 
 // => Rendering a class component:
 class AnonymousThreatComponent extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            remmainingTime: 1000
+        }
+    }
+
     render() {
         return (
             <div>
@@ -48,6 +55,12 @@ class AnonymousThreatComponent extends React.Component {
                 <h2>Hello Mr. {this.props.name}!</h2>
                 <p>We go to your location in {this.props.city} city.</p>
                 <p>Please wait for our arrival.</p>
+                <button onClick={() => {
+                    this.setState({
+                        remmainingTime: this.state.remmainingTime - 5
+                    })
+                }}>Update remaining time</button>
+                <p>Remaining time of arrival: {this.state.remmainingTime} seconds.</p>
                 <hr />
             </div>
         )
