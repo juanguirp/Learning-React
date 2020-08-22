@@ -31,15 +31,22 @@ class AnonymousThreatComponent extends React.Component {
     }
 
     render() {
+        const styles = {
+            border: '1px solid black',
+            marginBottom: '1em',
+            borderRadius: '0.5em',
+            padding: '1em',
+            background: 'linear-gradient(45deg, mediumslateblue, darkorchid)',
+            color: 'white'
+        }
         return (
-            <div>
+            <div style={styles}>
                 <h1>We 'have class' and elegance:</h1>
                 <h2>Hello Mr. {this.props.name}!</h2>
                 <p>We go to your location in {this.props.city} city.</p>
                 <p>Please wait for our arrival.</p>
                 <button onClick={this.updateRemainingTime}>Update remaining time</button>
                 <p>Remaining time of arrival: {this.state.remmainingTime} seconds.</p>
-                <hr />
             </div>
         )
     }

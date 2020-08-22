@@ -23,6 +23,8 @@ const App = () => (
         <SimpleAnonymousThreatComponent
             name={robertFromNY.name}
             city={robertFromNY.city} />
+        
+        <SimpleAnonymousThreatComponent></SimpleAnonymousThreatComponent>
 
         <AnonymousThreatComponent
             name={robertFromNY.name}
