@@ -1,5 +1,5 @@
 import React from 'react'
-import './AnonymousThreatComponent.css'
+import styles from './AnonymousThreatComponent.module.css'
 
 // Standard class component
 class AnonymousThreatComponent extends React.Component {
@@ -34,7 +34,7 @@ class AnonymousThreatComponent extends React.Component {
     render() {
 
         return (
-            <div className='AnonymousThreatComponent'>
+            <div className={styles.card}>
                 <h1>We 'have class' and elegance:</h1>
                 <h2>Hello Mr. {this.props.name}!</h2>
                 <p>We go to your location in {this.props.city} city.</p>

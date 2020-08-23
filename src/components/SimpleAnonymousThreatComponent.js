@@ -1,5 +1,5 @@
 import React from 'react'
-import './SimpleAnonymousThreatComponent.css'
+import styles from './SimpleAnonymousThreatComponent.module.css'
 
 // Non-standard... class component with property initializers
 class SimpleAnonymousThreatComponent extends React.Component {
@@ -16,9 +16,9 @@ class SimpleAnonymousThreatComponent extends React.Component {
 
         const hasTimeToRun = this.state.remmainingTime > 980
 
-        const tooLateToRun = hasTimeToRun ? '' : 'SimpleAnonymousThreatComponent-late'
+        const tooLateToRun = hasTimeToRun ? '' : styles['card-late']
 
-        const classes = `SimpleAnonymousThreatComponent-run ${tooLateToRun}`
+        const classes = `${styles['card-run']} ${tooLateToRun}`
 
         return (
             <div className={classes}>
