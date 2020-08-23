@@ -1,0 +1,15 @@
+.SimpleAnonymousThreatComponent-run {
+    border: 1px solid black;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    padding: 1em;
+    background: linear-gradient(45deg, green, forestgreen);
+    color: white;
+    transition: all 450ms ease-out;
+ }
+
+ .SimpleAnonymousThreatComponent-late {
+    background: linear-gradient(45deg, red, orange);
+    color: yellow;
+    transition: all 450ms ease-out;
+ }

@@ -1,0 +1,8 @@
+.AnonymousThreatComponent{
+    border: 3px solid purple;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    padding: 1em;
+    background: linear-gradient(45deg, mediumslateblue, darkorchid);
+    color: white;
+}

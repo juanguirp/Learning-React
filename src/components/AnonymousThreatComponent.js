@@ -1,4 +1,5 @@
 import React from 'react'
+import './AnonymousThreatComponent.css'
 
 // Standard class component
 class AnonymousThreatComponent extends React.Component {
@@ -31,16 +32,9 @@ class AnonymousThreatComponent extends React.Component {
     }
 
     render() {
-        const styles = {
-            border: '1px solid black',
-            marginBottom: '1em',
-            borderRadius: '0.5em',
-            padding: '1em',
-            background: 'linear-gradient(45deg, mediumslateblue, darkorchid)',
-            color: 'white'
-        }
+
         return (
-            <div style={styles}>
+            <div className='AnonymousThreatComponent'>
                 <h1>We 'have class' and elegance:</h1>
                 <h2>Hello Mr. {this.props.name}!</h2>
                 <p>We go to your location in {this.props.city} city.</p>
