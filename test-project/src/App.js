@@ -2,20 +2,29 @@ import React, {Component} from 'react'
 
 class Counter extends Component {
   state = {
-    clicks: 0
+    video: {
+      title: 'titulo',
+      likes: 0
+    }
   }
 
   add = () => {
-    this.setState({
-      clicks: this.state.clicks + 1
-    })
+    this.setState((state) => ({
+      video: {
+        ...state.video,
+        likes: state.video.likes + 1
+      }
+      }))
   }
 
   render(){
     return (
+      <div>
+      <h1>Titulo: {this.state.video.title}</h1>
         <button onClick={this.add}>
-          Clicks: ({ this.state.clicks })
+          Clicks: ({ this.state.video.likes })
         </button>
+        </div>
       )
   }
 }
