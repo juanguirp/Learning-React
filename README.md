@@ -1,7 +1,7 @@
 # Learning React
 
 ## Path
-* Basic in react
+* Basic in React
 	* Testing JSX
 	* Functional component
 	* Class component
